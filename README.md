@@ -4,7 +4,7 @@
 
 This guide represents our method of applying the SPACE framework to measure productivity in small software teams. It is not an official implementation but a structured approach that aligns closely with SPACE’s core principles and metrics. While our methodology follows SPACE dimensions, the specific metrics, weighting, and ranking system can be modified to suit different team structures, goals, and project requirements.
 
-### Step 1: Select Measurable Metrics for Student Teams
+### Step 1: Select Measurable Metrics
 
 | **SPACE Dimension**       | **Selected Metrics** | **How to Measure** |
 |--------------------------|---------------------------------|-----------------|
@@ -16,7 +16,7 @@ This guide represents our method of applying the SPACE framework to measure prod
 
 ---
 
-### Step 2: Normalize Metrics for Fair Comparison
+### Step 2: Normalize Metrics
 
 Each metric needs to be converted to a standardized scale (e.g., 0-100) so that different types of data (survey responses vs. commits) can be compared fairly.  
 
@@ -32,7 +32,7 @@ $$\text{Normalized Score} = \left(\frac{\text{Individual Score}}{\text{Max or Av
 
 ---
 
-### Step 3: Weight the Metrics (Optional)
+### Step 3: Weight the Metrics
 
 Depending on research priorities, we can assign weights to different SPACE dimensions.  
 
@@ -56,9 +56,9 @@ Where:
 
 ---
 
-### Step 4: Rank Team Members Based on Final Score
+### Step 4: Rank with Final Score
 
-Once we compute final scores for each student, we can rank them from highest to lowest.  
+Once we compute final scores for member, we can rank them from highest to lowest.  
 
 | **Student** | **Final Productivity Score (%)** | **Rank** |
 |------------|-------------------------|------|
