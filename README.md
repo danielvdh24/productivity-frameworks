@@ -8,8 +8,8 @@ This guide represents our method of applying the SPACE framework to measure prod
 
 | **SPACE Dimension**       | **Selected Metrics** | **How to Measure** |
 |--------------------------|---------------------------------|-----------------|
-| Satisfaction | Self-reported productivity satisfaction | Survey: "On a scale of 1-5, how satisfied are you with your productivity this week?" |
-| Performance | Number of successfully completed tasks | Count tasks marked as "Done" in project management tools (e.g., GitHub Issues, Trello) |
+| Satisfaction | Self-reported productivity satisfaction | "On a scale of 1-5, how satisfied are you with your productivity this week?" |
+| Performance | Number of successfully completed tasks | Count tasks marked as complete in project management tools |
 | Activity | Number of commits | Extract from GitHub/GitLab repository |
 | Collaboration | Code review participation | Count number of comments made on merge requests/commits |
 | Efficiency | Time spent actively coding | GitHub/GitLab statistics or Survey |
