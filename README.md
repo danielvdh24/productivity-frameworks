@@ -12,7 +12,7 @@ This guide represents our method of applying the SPACE framework to measure prod
 | Performance | Number of successfully completed tasks | Count tasks marked as "Done" in project management tools (e.g., GitHub Issues, Trello) |
 | Activity | Number of commits | Extract from GitHub/GitLab repository |
 | Collaboration | Code review participation | Count number of comments made on merge requests/commits |
-| Efficiency | Time spent actively coding | Use GitHub statistics or screen monitoring tools (if available) |
+| Efficiency | Time spent actively coding | GitHub/GitLab statistics or Survey |
 
 ---
 
