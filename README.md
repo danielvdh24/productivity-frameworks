@@ -87,7 +87,7 @@ You will be prompted to enter the productivity and satisfaction scores for each 
 ### Summary
 The steps above outline how we completed the data analysis and scoring for each of the 6 student groups that participated in the study. For a full explanation of the formulas, weights, and normalization methods used in both the Baidu and SPACE frameworks, please refer to the Data Analysis section of our methodology in the thesis paper.
 
-We also combined the results from all groups into a single table identify how the most productive contributors rated themselves. This table, alongside other visualizations, can be found in the `charts-and-data/` folder.
+We also combined the results from all groups into a single table to identify how the most productive contributors rated themselves. This table, along with our survey questionnaire and the responses, can be found in the `charts-and-data/` folder, alongside other visualizations.
 
 --- 
 
