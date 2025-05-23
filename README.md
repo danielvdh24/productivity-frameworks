@@ -1,5 +1,5 @@
 <div align="left">
-    <img src="https://github.com/user-attachments/assets/c62890fa-5d4b-48d8-a7fa-9ca3516cc112" style="height: 370px;">
+    <img src="https://github.com/user-attachments/assets/88217889-4676-4fff-bd64-70c0112128f4" style="height: 370px;">
 </div>
 
 This guide represents our method of applying the SPACE framework to measure productivity in small software teams. It is not an official implementation but a structured approach that aligns closely with SPACE’s core principles and metrics. While our methodology follows SPACE dimensions, the specific metrics, weighting, and ranking system can be modified to suit different team structures, goals, and project requirements.
