@@ -1,5 +1,5 @@
 <div align="left">
-    <img src="https://github.com/user-attachments/assets/88217889-4676-4fff-bd64-70c0112128f4" style="height: 370px;">
+    <img src="https://github.com/user-attachments/assets/fb628d69-c0d2-4a34-8c3f-c9437871f132" style="height: 370px;">
 </div>
 
 This repository contains the data analysis scripts, charts, and final paper from my bachelor's thesis conducted at the University of Gothenburg. In this study, we explore and compare three approaches to evaluating student productivity in software development teams:
