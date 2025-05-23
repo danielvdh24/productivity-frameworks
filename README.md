@@ -4,11 +4,11 @@
 
 This repository contains the data analysis scripts, charts, and final paper from my bachelor's thesis conducted at the University of Gothenburg. In this study, we explore and compare three approaches to evaluating student productivity in software development teams:
 
-- **Baidu framework** – a metric-driven model focusing on quantitative data such as commits, lines of code, and code reviews.
-- **SPACE framework** – a more holistic approach that incorporates factors like satisfaction, communication, task completion, and activity.
-- **Self-perceived productivity** – collected through surveys and ratings provided by team members themselves.
+- <ins>**Baidu framework**</ins> – a metric-driven model focusing on quantitative data such as commits, lines of code, and code reviews.
+- <ins>**SPACE framework**</ins> – a more holistic approach that incorporates factors like satisfaction, communication, task completion, and activity.
+- <ins>**Self-perceived productivity**</ins> – collected through surveys and ratings provided by team members themselves.
 
-The goal of this study was to analyze potential correlations and disparities between external productivity measurements and students’ own perceptions of their contributions. Our findings aim to shed light on the alignment (or lack) between objective metrics and subjective experience within educational team-based development environments.
+The goal of this study was to analyze potential correlations and disparities between external productivity measurements and students' own perceptions of their contributions. Our findings aim to shed light on the alignment (or lack) between objective metrics and subjective experience within educational team-based development environments.
 
 ### Repository Structure
 - `scripts/` # All Python scripts for data cleaning, scoring (Baidu/SPACE), and processing
