@@ -27,7 +27,7 @@ Hence are not compatible with repositories from other platforms or with manually
 ---
 
 ### Data Analysis
-To run the analysis scripts, ensure you have Python 3.9+, Git, and Git Bash installed, along with the following Python packages:
+To run the analysis scripts, ensure you have Python, Git, and Git Bash installed, along with the following Python packages:
 - `pandas`, `numpy`, `scikit-learn`, `openpyxl`, `beautifulsoup4`, `gitstats`
 
 1. Unzip the exported .tar.gz GitLab project file and navigate to the inner directory
@@ -49,7 +49,7 @@ It will generate three CSV files:
 Once these files are created, running `createTable.py` will analyze and compile all GitLab activity per contributor, including the number of system actions (such as status changes and assignments), comments written, issues assigned, and merge requests assigned. Creating the `contributions_table.xlsx`.
 
 5. Navigate back to the root of the extracted GitLab export where the `project.bundle` file is located. Open a terminal here and run: `git clone project.bundle`
-6. This will create a cloned project folder containing the full repository. Navigate into that folder, right-click inside the directory and select “Git Bash Here” (found under 'More options' in Windows). In Git Bash, run: `gitstats . gitstats_output`
+6. This will create a cloned project folder containing the full repository. Navigate into that folder, right-click inside the directory and select 'Git Bash Here' (found under 'More options' in Windows). In Git Bash, run: `gitstats . gitstats_output`
 7. Place the `createStats.py` script inside the `gitstats_output` folder. Open a terminal in that directory and run: `python createStats.py`
 
 This will produce the `gitstats_table.xlsx` file, which extracts and compiles only the LOC metrics per author while removing unnecessary sections such as author of the month and commits by domain.
