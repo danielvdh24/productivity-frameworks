@@ -58,7 +58,7 @@ This will produce the `gitstats_table.xlsx` file, which extracts and compiles on
 
 ### Table Aggregation
 
-Once `final_gitlab_contributions.xlsx` and `gitstats_table.xlsx`are generated, manually merge them into a single table before running the ranking scripts. Match each author_username to the corresponding Author in the GitStats file and copy over the Commits (%), + lines, and - lines columns into the contributions file. Add them beside the existing columns and ensure names are properly aligned. Save the final result as `final_table.xlsx`, which will be used as input for the ranking computations.
+Once `contributions_table.xlsx` and `gitstats_table.xlsx`are generated, manually merge them into a single table before running the ranking scripts. Match each author_username to the corresponding Author in the gitstats table and copy over the Commits (%), + lines, and - lines columns into the contributions table. Add them beside the existing columns and ensure names are properly aligned. Save the final result as `final_table.xlsx`, which will be used as input for the ranking computations.
 
 Your `final_table.xlsx` should look similar to:
 
