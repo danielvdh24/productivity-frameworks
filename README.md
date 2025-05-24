@@ -39,18 +39,18 @@ To run the analysis scripts, ensure you have Python, Git, and Git Bash installed
 3. Place `extractData.py` and `createTable.py` inside that `tree/project` directory.
 4. Open a terminal in the current directory and run `extractData.py` followed by `createTable.py` using `python <script>.py`
 
-Running `extractData.py` will parse and clean the exported GitLab files, mapping author_ids to usernames using the data in project_members.ndjson, as well as dropping unneeded advanced metadata such as 'lock_version' or 'merge_params'.
+Running `extractData.py` will parse and clean the exported GitLab files, mapping author_ids to usernames using the data in project_members.ndjson, as well as dropping unneeded metadata such as 'lock_version' or 'merge_params'.
 
 It will generate three CSV files: 
 - `all_comments.csv` - which includes all comments and GitLab activity
-- `cleaned_issues.csv` - which contains enriched metadata for issues including authorship and edit history
+- `cleaned_issues.csv` - which contains metadata for issues including authorship and edit history
 - `cleaned_merge_requests.csv` - with equivalent information for merge requests.
 
 Once these files are created, running `createTable.py` will analyze and compile all GitLab activity per contributor, including the number of system actions (such as status changes and assignments), comments written, issues assigned, and merge requests assigned. Creating the `contributions_table.xlsx`.
 
 5. Navigate back to the root of the extracted GitLab export where the `project.bundle` file is located. Open a terminal here and run: `git clone project.bundle`
 6. This will create a cloned project folder containing the full repository. Navigate into that folder, right-click inside the directory and select 'Git Bash Here' (found under 'More options' in Windows). In Git Bash, run: `gitstats . gitstats_output`
-7. Place the `createStats.py` script inside the `gitstats_output` folder. Open a terminal in that directory and run: `python createStats.py`
+7. Place the `createStats.py` script inside the generated `gitstats_output` folder. Open a terminal in that directory and run: `python createStats.py`
 
 This will produce the `gitstats_table.xlsx` file, which extracts and compiles only the LOC metrics per author while removing unnecessary sections such as author of the month and commits by domain.
 
@@ -72,7 +72,7 @@ For Baidu scoring, place `rankBaidu.py` in the same directory as `final_table.xl
 
 This will print the rankings of all contributors, along with the normalized metrics used to compute the final score: `norm_commits`, `norm_lines`, `norm_reviews`, and the resulting `final_score`.
 
-![image](https://github.com/user-attachments/assets/73ad5218-7e00-4d3c-92a8-20e68ec9d8d5)
+![baidu](https://github.com/user-attachments/assets/0c444735-b3a6-436f-b33d-a2550e840128)
 
 ### SPACE Framework Ranking
 
