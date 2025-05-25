@@ -62,7 +62,7 @@ Once `interface_contributions.xlsx` and `git_contributions.xlsx` are generated, 
 
 Your `final_table.xlsx` should look similar to:
 
-![image](https://github.com/user-attachments/assets/a5f6c158-8e89-44d9-bf6e-b92fb28365a3)
+![image](https://github.com/user-attachments/assets/e8f66eab-8c7d-42bf-9e83-333f50697328)
 
 ---
 
@@ -72,13 +72,14 @@ For Baidu scoring, place `rankBaidu.py` in the same directory as `final_table.xl
 
 This will print the rankings of all contributors, along with the normalized metrics used to compute the final score: `norm_commits`, `norm_lines`, `norm_reviews`, and the resulting `final_score`.
 
-![baidu](https://github.com/user-attachments/assets/0c444735-b3a6-436f-b33d-a2550e840128)
+![image](https://github.com/user-attachments/assets/59871911-7343-43ef-bc3a-772914853eb8)
+
 
 ### SPACE Framework Ranking
 
 For the SPACE framework, you will be prompted to enter the productivity and satisfaction scores for each listed contributor. The script will then output their rankings, along with their computed scores for satisfaction (S_score), performance (P_score), activity (A_score), collaboration (C_score), and the final_score.
 
-![image](https://github.com/user-attachments/assets/828ab4ba-7eb1-41e6-b1b8-1e4d8566bd90)
+![image](https://github.com/user-attachments/assets/da5c8ac8-8592-423c-ac47-dd0d59ad1214)
 
 --- 
 
