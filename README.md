@@ -21,14 +21,15 @@ These analysis scripts were developed specifically for repositories exported fro
 - `issues.ndjson`
 - `merge_requests.ndjson`
 - `project_members.ndjson`
-
 Hence are not compatible with repositories from other platforms or with manually created data unless it follows the exact same schema.
+
+Our study was conducted on a per-group basis, focusing on activity from the two weeks leading up to each group’s survey date. As such, both `extractData.py` and `extractGit.py` require the survey date as input to ensure data is limited strictly to that time frame. Furthermore, since the study included a survey in which each contributor rated their self-perceived productivity and satisfaction on a 1–5 scale (with 5 being the highest), the `rankSpace.py` script prompts for these inputs.
 
 ---
 
 ### Data Analysis
-To run the analysis scripts, ensure you have Python, Git, and Git Bash installed, along with the following Python packages:
-- `pandas`, `numpy`, `scikit-learn`, `openpyxl`, `beautifulsoup4`, `gitstats`
+To run the analysis scripts, ensure you have Python and Git installed, along with the following Python packages:
+- `pandas`, `numpy`, `scikit-learn`, `openpyxl`, `beautifulsoup4`
 
 1. Unzip the exported .tar.gz GitLab project file and navigate to the inner directory
    `<unzipped>/tree/project/`
@@ -36,29 +37,28 @@ To run the analysis scripts, ensure you have Python, Git, and Git Bash installed
    - `issues.ndjson`
    - `merge_requests.ndjson`
    - `project_members.ndjson`
-3. Place `extractData.py` and `createTable.py` inside that `tree/project` directory.
-4. Open a terminal in the current directory and run `extractData.py` followed by `createTable.py` using `python <script>.py`
+3. Place `extractData.py` inside that `tree/project` directory.
+4. Open a terminal in the current directory and run `extractData.py` using `python extractData.py`
 
-Running `extractData.py` will parse and clean the exported GitLab files, mapping author_ids to usernames using the data in project_members.ndjson, as well as dropping unneeded metadata such as 'lock_version' or 'merge_params'.
+Running this will prompt you to enter a survey date, where the script will then filter only the contributions made during the 2-week period and clean the exported GitLab files, mapping author_ids to usernames using the data in project_members.ndjson, as well as dropping unneeded metadata such as 'lock_version' or 'merge_params'.
 
 It will generate three CSV files: 
 - `all_comments.csv` - which includes all comments and GitLab activity
 - `cleaned_issues.csv` - which contains metadata for issues including authorship and edit history
 - `cleaned_merge_requests.csv` - with equivalent information for merge requests.
 
-Once these files are created, running `createTable.py` will analyze and compile all GitLab activity per contributor, including the number of system actions (such as status changes and assignments), comments written, issues assigned, and merge requests assigned. Creating the `contributions_table.xlsx`.
+Once these files are created, the script will analyze and compile all GitLab activity per contributor, including the number of system actions (such as status changes and assignments), comments written, issues assigned, and merge requests assigned. Creating the `interface_contributions.xlsx` table.
 
 5. Navigate back to the root of the extracted GitLab export where the `project.bundle` file is located. Open a terminal here and run: `git clone project.bundle`
-6. This will create a cloned project folder containing the full repository. Navigate into that folder, right-click inside the directory and select 'Git Bash Here' (found under 'More options' in Windows). In Git Bash, run: `gitstats . gitstats_output`
-7. Place the `createStats.py` script inside the generated `gitstats_output` folder. Open a terminal in that directory and run: `python createStats.py`
+6. This will create a cloned project folder containing the full repository. Navigate and place `extractGit.py` into the folder, then run: `python extractGit.py`
 
-This will produce the `gitstats_table.xlsx` file, which extracts and compiles only the LOC metrics per author while removing unnecessary sections such as author of the month and commits by domain.
+Again, this will prompt you to enter a survey date. After which, the script will produce the `git_contributions.xlsx` table, which extracts and compiles only the number of commits and lines of code added per author in the 2-week period.
 
 ---
 
 ### Table Aggregation
 
-Once `contributions_table.xlsx` and `gitstats_table.xlsx`are generated, manually merge them into a single table before running the ranking scripts. Match each author_username to the corresponding Author in the gitstats table and copy over the Commits (%), + lines, and - lines columns into the contributions table. Add them beside the existing columns and ensure names are properly aligned. Save the final result as `final_table.xlsx`, which will be used as input for the ranking computations.
+Once `interface_contributions.xlsx` and `git_contributions.xlsx` are generated, manually merge them into a single table before running the ranking scripts. Match each author to the corresponding author in the `git_contributions` table and copy over the commits and lines added columns into the `interface_contributions` table. Add them beside the existing columns and ensure names are properly aligned. Save the final result as `final_table.xlsx`, which will be used as input for the ranking computations.
 
 Your `final_table.xlsx` should look similar to:
 
@@ -76,9 +76,7 @@ This will print the rankings of all contributors, along with the normalized metr
 
 ### SPACE Framework Ranking
 
-For the SPACE framework, since our study included a survey asking each contributor to rate their self-perceived productivity and satisfaction on a 1–5 scale (with 5 being the highest), the script requires these inputs. To replicate this, you should ask each contributor to provide their 1–5 ratings before running the script. Place `rankSpace.py` in the same directory as `final_table.xlsx` and run: `python rankSpace.py`
-
-You will be prompted to enter the productivity and satisfaction scores for each listed contributor. The script will then output their rankings, along with their computed scores for task completion (task_completion), performance (P_score), activity (A_score), collaboration (C_score), and the final_score.
+For the SPACE framework, you will be prompted to enter the productivity and satisfaction scores for each listed contributor. The script will then output their rankings, along with their computed scores for satisfaction (S_score), performance (P_score), activity (A_score), collaboration (C_score), and the final_score.
 
 ![image](https://github.com/user-attachments/assets/828ab4ba-7eb1-41e6-b1b8-1e4d8566bd90)
 
