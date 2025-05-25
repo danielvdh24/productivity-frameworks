@@ -53,7 +53,7 @@ Once these files are created, the script will analyze and compile all GitLab act
 5. Navigate back to the root of the extracted GitLab export where the `project.bundle` file is located. Open a terminal here and run: `git clone project.bundle`
 6. This will create a cloned project folder containing the full repository. Navigate and place `extractGit.py` into the folder, then run: `python extractGit.py`
 
-Again, this will prompt you to enter a survey date. After which, the script will produce the `git_contributions.xlsx` table, which extracts and compiles only the number of commits and lines of code added per author in the 2-week period.
+Again, this will prompt you to enter the survey date. After which, the script will produce the `git_contributions.xlsx` table, which extracts and compiles only the number of commits and lines of code added per author in the 2-week period.
 
 ---
 
