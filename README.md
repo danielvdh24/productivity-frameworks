@@ -12,7 +12,7 @@ The goal of this study was to analyze potential correlations and disparities bet
 
 ### Repository Structure
 - `scripts/` # All Python scripts for data cleaning, scoring (Baidu/SPACE), and processing
-- `charts-and-data/` # Visualizations and figures used in the thesis
+- `charts-and-data/` # Visualizations, figures, and data used in the thesis
 - `thesis.pdf` # Final submitted thesis paper
 - `README.md` # Current file
 
