@@ -78,7 +78,7 @@ This will print the rankings of all contributors, along with the normalized metr
 
 ### SPACE Framework Ranking
 
-For the SPACE framework, you will be prompted to enter the productivity and satisfaction scores for each listed contributor. The script will then output their rankings, along with their computed scores for satisfaction (S_score), performance (P_score), activity (A_score), collaboration (C_score), and the final_score.
+For the SPACE framework, you will be prompted to enter the productivity and satisfaction scores for each listed contributor. The script will then output their rankings, along with their computed scores for satisfaction (`S_score`), performance (`P_score`), activity (`A_score`), collaboration (`C_score`), and the `final_score`.
 
 ![image](https://github.com/user-attachments/assets/da5c8ac8-8592-423c-ac47-dd0d59ad1214)
 
@@ -87,7 +87,7 @@ For the SPACE framework, you will be prompted to enter the productivity and sati
 ### Summary
 The steps above outline how we completed the data analysis and scoring for each of the 6 student groups that participated in the study. For a full explanation of the formulas, weights, and normalization methods used in both the Baidu and SPACE frameworks, please refer to the Data Analysis section of our methodology in the thesis paper.
 
-We also combined the results from all groups into a single table to identify how the most productive contributors rated themselves. This table, along with our survey questionnaire and the responses, can be found in the `charts-and-data/` folder, alongside other visualizations.
+The survey questionaire, tables, charts, and other visualizations can be found in the `charts-and-data/` folder.
 
 --- 
 
